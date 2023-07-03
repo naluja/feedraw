@@ -1,0 +1,314 @@
+@use "./colors" as *;
+@use "./animations" as *;
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0;
+}
+html {
+	scroll-padding-top: 58px;
+}
+body {
+	background-color: #333;
+	font-family: "Montserrat", sans-serif;
+}
+nav {
+	text-transform: uppercase;
+	z-index: 5;
+	width: 100%;
+	.navbar-toggler {
+		padding: 10px;
+	}
+
+	.nav-link,
+	.navbar-nav .show > .nav-link,
+	.navbar-brand,
+	.fa-bars {
+		color: $white;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .nav-link.show {
+		color: $main-color;
+	}
+	.navbar-brand {
+		font-weight: 700;
+	}
+}
+.red {
+	color: $main-color;
+}
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.underline {
+	height: 2px;
+	width: 100px;
+	background-color: $main-color;
+	margin: auto;
+}
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+.hero-img {
+	height: 100vh;
+	background: url(/img/pexels-samson-katt-5255554.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+	z-index: 0;
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+		height: 100%;
+		h1 {
+			text-transform: uppercase;
+		}
+	}
+
+	.hero-shadow {
+		position: absolute;
+		background-color: black;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		opacity: 60%;
+		z-index: -1;
+	}
+}
+.fa-chevron-down {
+	position: absolute;
+	bottom: 20px;
+	font-size: 30px;
+	color: $white;
+	left: 50%;
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+}
+.row {
+	div {
+		transition: color 0.3s;
+	}
+}
+.row {
+	div:hover {
+		color: $main-color;
+	}
+}
+.aboutus-hero {
+	color: $white;
+	position: relative;
+	background-image: url(/img/pexels-leonora-brebner-9843971.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+	}
+
+	.row {
+		.aboutus-hero-text {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		i {
+			font-size: 28px;
+		}
+	}
+}
+.reviews {
+	h2 {
+		color: black;
+	}
+	.carousel-item {
+		height: 700px;
+		p {
+			text-align: center;
+			font-size: 14px;
+			padding: 0 15px;
+		}
+	}
+	.carousel-caption {
+		background-color: rgba(0, 0, 0, 0.4);
+		right: 0;
+		left: 0;
+		padding: 40px 0;
+	}
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+.prices {
+	.container-price {
+		margin: 50px;
+		.card-price {
+			h3 {
+				text-transform: uppercase;
+				border-bottom: 1px solid $light-gray;
+				font-size: 22px;
+				font-weight: 700;
+				margin-bottom: 20px;
+			}
+			background-color: white;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+			padding: 30px 0;
+			margin: 20px;
+			border-radius: 5px;
+			transition: scale 0.3s;
+
+			.fa-check {
+				color: green;
+				padding: 3px;
+			}
+			.fa-xmark {
+				color: red;
+			}
+			.price {
+				font-weight: 700;
+				font-size: 22px;
+			}
+			button {
+				padding: 10px 20px;
+				text-transform: uppercase;
+			}
+		}
+		.card-price:hover {
+			scale: 1.05;
+		}
+		.personalize {
+			margin-top: 50px;
+			a {
+				color: black;
+				text-decoration: none;
+				font-weight: 700;
+				transition: color 0.3s;
+			}
+			a:hover {
+				color: $main-color;
+			}
+		}
+	}
+}
+.team {
+	background-image: url(/img/bc-team.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+	h2 {
+		color: $white;
+	}
+
+	.card-footer {
+		display: flex;
+		justify-content: space-around;
+		i {
+			transition: color 0.3s;
+		}
+		i:hover {
+			color: royalblue;
+		}
+	}
+}
+.achivements {
+	.achivement-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+		i {
+			font-size: 32px;
+			margin-bottom: 5px;
+		}
+	}
+}
+.contact {
+	position: relative;
+	z-index: 0;
+	background-image: url(/img/bc-contact.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	.contact-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: -5;
+	}
+	h2 {
+		color: $white;
+	}
+	.contact-item {
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 30px 0px;
+		color: $white;
+		transition: scale 0.3s;
+		h3 {
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+
+		.social-media {
+			
+			i{
+				font-size: 30px;
+				margin-right: 20px;
+				color: $white;
+				transition: color 0.3s;
+			}
+			i:hover {
+				color: royalblue;
+			}
+		}
+	}
+	.contact-item:hover {
+		color: $white;
+		scale: 1.05;
+	}
+}
+@media (min-width: 768px) {
+	.hero-text {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 55px;
+	}
+}
