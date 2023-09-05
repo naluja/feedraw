@@ -26,7 +26,7 @@ const currentYear = () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     currentYear()
-	window.addEventListener("scroll", addShadow)
+	window.addEventListener("scroll", toggleShadow)
 
     navLinks.forEach(item => item.addEventListener("click", hideNav))
    
